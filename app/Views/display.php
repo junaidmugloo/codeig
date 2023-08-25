@@ -7,13 +7,21 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
 <body>
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link" href="/about">Insert</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="/view">Display</a>
+  </li>
+  
+</ul>
 <div class="container mt-5">
-<li><a href="<?php echo site_url('/about') ?>">insert</a></li>
-<li><a href="<?php echo site_url('/view') ?>">display</a></li>
+
   <div class="mt-3">
 
 
-     <table class="table table-bordered" id="users-list">
+     <table  class="data table table-bordered dataTable" width="100%" cellspacing="0" role="grid" id="bt" aria-describedby="dataTable_info" >
        <thead>
           <tr>
              <th>Id</th>
@@ -25,7 +33,7 @@
        <tbody>
           <?php if($users): ?>
           <?php foreach($users as $user): ?>
-          <tr>
+          <tr >
              <td><?php echo $user['id']; ?></td>
              <td><?php echo $user['name']; ?></td>
              <td><?php echo $user['email']; ?></td>
@@ -41,11 +49,11 @@
  
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-<script>
-    $(document).ready( function () {
-      $('#users-list').DataTable();
-  } );
+<script type="text/javascript" src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+
+
+
 </script>
 </body>
 </html>

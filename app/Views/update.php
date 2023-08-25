@@ -20,8 +20,18 @@
  
 </head>
 <body>
-<li><a href="<?php echo site_url('/about') ?>">insert</a></li>
-<li><a href="<?php echo site_url('/view') ?>">display</a></li>
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link" href="/about">Insert</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/view">Display</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" >Update</a>
+  </li>
+  
+</ul>
  <div class="container">
     <br>
     <?= \Config\Services::validation()->listErrors(); ?>
